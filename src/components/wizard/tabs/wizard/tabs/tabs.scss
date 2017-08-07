@@ -1,0 +1,79 @@
+@import '~assets/stylesheets/sass/variables.scss';
+
+/* Card Component*/
+.card {
+  background-color: $gray-xs;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  &:hover {
+
+  }
+}
+
+.card:before {
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  border-left-color: $gray-xxs;
+  border-width: 25px 0 25px 25px;
+  margin-left: 0;
+  top: 0;
+  align-self: flex-start;
+}
+
+.card:after {
+  border: solid $gray-xxs;
+  content: " ";
+  position: absolute;
+  border-left-color: $gray-xs;
+  border-width: 25px 0 25px 25px;
+  margin-left: 0;
+  top: 0;
+  align-self: flex-end;
+}
+
+.label {
+  color: $gray-xxl;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/*Wizard Container*/
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wizardContainer {
+  flex: 1;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.current {
+  background-color: $gray-xxl;
+  .label {
+    color: $white;
+  }
+}
+
+.current:after {
+  border-left-color: $gray-xxl;
+}
+
+.hide {
+  display: none;
+}
